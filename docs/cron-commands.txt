@@ -1,0 +1,3 @@
+sudo cat /var/log/cron.log
+
+sudo systemctl status cron
