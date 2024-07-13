@@ -8,6 +8,8 @@
  * DIALOGBOX
  * BUTTON
  * POSITION
+ * HEADLINE
+ * NAVIGATION SAMPLE SOCIAL
  *
 */
 
@@ -15,21 +17,32 @@
 
 :root {
     --transparent: transparent;
-
     --white: hsl(0, 100%, 100%);
-    
     --black: hsl(0, 0%, 0%);
-    
     --background: hsl(0, 0%, 98%);
-    
     --text: hsl(0, 0%, 27%);
-    
     --border: hsl(0, 0%, 67%);
+    --shadow: hsl(0, 0%, 15%);
+
+    --primary: hsl(211, 80%, 54%);
+    --success: hsl(122, 39%, 49%);
+    --warning: hsl(38, 96%, 51%);
+    --danger: hsl(3, 100%, 56%);
+
+    /* Theme Color Template */
+    --color-theme-main: hsl(252, 100%, 28%);
+    --color-theme-light: hsl(229, 100%, 50%);
+    --color-theme-alternate: hsl(46, 100%, 50%);
+
 }
 
 /* ========== RESET ========== */
 
-::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder, ::placeholder {
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+::placeholder {
     font-size: 90%;
     color: var(--text);
 }
@@ -43,7 +56,8 @@
     cursor: not-allowed;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -119,11 +133,29 @@ body {
     letter-spacing: 0.015em;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, blockquote, input, pre, hr {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+input,
+pre,
+hr {
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
     font-size: 100%;
 }
 
@@ -132,7 +164,13 @@ hr {
     border-bottom: 0.1em solid var(--border);
 }
 
-pre, input, button, textarea, select, table, figcaption {
+pre,
+input,
+button,
+textarea,
+select,
+table,
+figcaption {
     font-size: inherit;
     line-height: inherit;
 }
@@ -142,7 +180,9 @@ pre {
     white-space: pre-line;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
     outline: 0;
 }
 
@@ -150,7 +190,9 @@ input {
     vertical-align: middle;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
     width: 100%;
     box-sizing: border-box;
     font-family: inherit;
@@ -161,7 +203,8 @@ textarea {
     resize: vertical;
 }
 
-legend, fieldset {
+legend,
+fieldset {
     padding: 0;
     margin: 0;
 }
@@ -197,6 +240,13 @@ video {
 
 /* ========== GRID ========== */
 
+@media screen and (min-width: 1024px) {
+    .content-row {
+        width: 90%;
+        margin: auto;
+    }
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -205,10 +255,11 @@ video {
     align-items: stretch;
 }
 
-.row > .col {
+.row>.col {
     box-sizing: border-box;
     padding: 0.5em 1em;
-    flex: 1 1 0; /* por padrão todos os itens da row possuem o mesmo tamanho */
+    flex: 1 1 0;
+    /* por padrão todos os itens da row possuem o mesmo tamanho */
 }
 
 .row.align {
@@ -225,23 +276,27 @@ video {
     margin: auto;
 }
 
-.row.auto > .col {
-    flex: 1 1 auto; /* o tamanho dos itens é de acoro com espaço disponível */
+.row.auto>.col {
+    flex: 1 1 auto;
+    /* o tamanho dos itens é de acoro com espaço disponível */
 }
 
-.row.two > .col {
-    flex: 1 1 50%; /* define o tamanho máximo dos itens para duas colunas */
+.row.two>.col {
+    flex: 1 1 50%;
+    /* define o tamanho máximo dos itens para duas colunas */
 }
 
-.row.tree > .col {
-    flex: 1 1 33.3333333333%; /* define o tamanho máximo dos itens para três colunas */
+.row.tree>.col {
+    flex: 1 1 33.3333333333%;
+    /* define o tamanho máximo dos itens para três colunas */
 }
 
-.row.four > .col {
-    flex: 1 1 25%; /* define o tamanho máximo dos itens para quatro colunas */
+.row.four>.col {
+    flex: 1 1 25%;
+    /* define o tamanho máximo dos itens para quatro colunas */
 }
 
-.row > .col.center {
+.row>.col.center {
     display: flex;
     justify-content: center;
 }
@@ -249,12 +304,12 @@ video {
 
 @media screen and (max-width: 1024px) {
 
-    .row > .col,
-    .row.align > .col,
-    .row.center > .col,
-    .row.two > .col,
-    .row.tree > .col,
-    .row.four > .col {
+    .row>.col,
+    .row.align>.col,
+    .row.center>.col,
+    .row.two>.col,
+    .row.tree>.col,
+    .row.four>.col {
         flex: 1 1 auto;
     }
 
@@ -276,7 +331,12 @@ video {
 
 /* ========== DEFAULT ========== */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: bold;
 }
 
@@ -304,6 +364,8 @@ h6 {
     font-size: 75%;
 }
 
+/* ========== DIALOGBOX ========== */
+
 .box.dialog {
     position: fixed;
     top: 1em;
@@ -316,7 +378,7 @@ h6 {
     min-height: 25%;
     padding: 1em;
     background-color: var(--white);
-    box-shadow: 0.1em 0.1em 0.5em rgba(128, 128, 128, 1);
+    box-shadow: 0.1em 0.1em 0.5em var(--shadow);
     border-radius: 1em;
     overflow: auto;
 }
@@ -408,17 +470,17 @@ h6 {
     outline: none;
     padding: 0.5em 1em;
     box-sizing: border-box;
-    box-shadow: 0 0.15em 0.2em 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.15em 0.2em 0 var(--shadow);
     cursor: pointer;
     text-align: center;
 
-    color: rgba(102, 102, 102, 1);
-    border: 0.1em solid rgba(187, 187, 187, 1);
-    background-color: rgba(255, 255, 255, 1);
+    color: var(--text);
+    border: 0.1em solid var(--border);
+    background-color: var(--white);
 }
 
 .button:hover {
-    box-shadow: 0 0.2em 0.8em 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0.2em 0.8em 0 var(--shadow);
 }
 
 .button:disabled {
@@ -427,7 +489,7 @@ h6 {
 }
 
 .button:focus {
-    box-shadow: 0 0.2em 0.8em 0 rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0.2em 0.8em 0 var(--shadow);
 }
 
 .button.radius {
@@ -454,3 +516,36 @@ h6 {
     align-items: center;
     z-index: 1;
 }
+
+/* =================================== HEADLINE =================================== */
+
+.headline {
+    /* background: var(--color-theme-main); */
+    background: linear-gradient(90deg, var(--color-theme-main) 0%, var(--color-theme-light) 100%);
+    opacity: 0.75;
+}
+
+.headline>.content-row>.title {
+    font-size: 115%;
+    padding: 1em;
+    color: var(--white);
+}
+
+/* =================================== /HEADLINE =================================== */
+
+/* =================================== NAVIGATION SAMPLE SOCIAL =================================== */
+
+.navigation.sample.social {
+    display: flex;
+    margin-top: 1em;
+}
+
+.navigation.sample.social>a {
+    width: 3em;
+}
+
+.navigation.sample.social>a:not(:last-child) {
+    margin-right: 1em;
+}
+
+/* =================================== /NAVIGATION SAMPLE SOCIAL =================================== */
