@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd "~/git/political-campaign"
+cd "/home/ezequieloliveirapessoal/git/political-campaign"
 
 git fetch
 
