@@ -3,3 +3,7 @@ sudo cat /var/log/cron.log
 sudo systemctl status cron
 
 sudo crontab -e
+
+sudo crontab -u {username} -e
+
+sudo crontab -u {username} -l
