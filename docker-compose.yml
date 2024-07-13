@@ -8,11 +8,7 @@ services:
         container_name: nginx
         ports:
             - ${NGINX_PORT_HTTP}:80
-        links:
-            - php
         volumes:
             - ${NGINX_CONF_DIR}:/etc/nginx/conf.d
             - ${NGINX_LOG_DIR}:/var/log/nginx
             - ${APPLICATION_PATH}:/var/www
-        depends_on:
-            - php
