@@ -14,11 +14,13 @@
  * BUTTON
  * POSITION
  * HEADLINE
+ * ARTICLE TEXT
  * NAVIGATION SAMPLE SOCIAL
  * NAVIGATION FULL CONTENT
  * NAVIGATION SAMPLE LINK
  * PRESENTATION CONTAINER
  * CARD PRESENTATION
+ * CARD INFORMATION
  * COMMENT DEFAULT
  * COMMENT INFORMATION
  *
@@ -602,6 +604,29 @@ footer section:last-child {
 
 /* =================================== /HEADLINE =================================== */
 
+/* =================================== ARTICLE TEXT =================================== */
+
+.article.text {
+    text-align: justify;
+    margin: 1em 0;
+}
+
+.article.text>h1 {
+    color: var(--text);
+    text-align: center;
+    font-size: 250%;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 0.75em;
+    line-height: 1.25;
+}
+
+.article.text>p:not(:last-child) {
+    margin-bottom: 1em;
+}
+
+/* =================================== /ARTICLE TEXT =================================== */
+
 /* =================================== NAVIGATION SAMPLE SOCIAL =================================== */
 
 .navigation.sample.social {
@@ -802,6 +827,37 @@ footer section:last-child {
 }
 
 /* =================================== /CARD PRESENTATION =================================== */
+
+/* =================================== CARD INFORMATION =================================== */
+
+.card.information {
+    box-shadow: 0.1em 0.1em 0.25em var(--shadow);
+    padding: 1em;
+    position: relative;
+}
+
+.card.information>h2 {
+    font-size: 150%;
+    color: var(--success);
+}
+
+.card.information>p {
+    margin-bottom: 1em;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 1em;
+}
+
+.card.information>p::before {
+    height: 0.1em;
+    background: var(--success);
+    width: 30%;
+    content: "";
+    position: absolute;
+    bottom: 0;
+}
+
+/* =================================== /CARD INFORMATION =================================== */
 
 /* =================================== COMMENT DEFAULT =================================== */
 
